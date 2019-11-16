@@ -1,0 +1,71 @@
+#!/bin/bash
+
+RSA_KEY=/etc/ssh/ssh_host_rsa_key
+ECDSA_KEY=/etc/ssh/ssh_host_rsa_key
+ED25519_KEY=/etc/ssh/ssh_host_ed25519_key
+
+if test -f /force/ssh_host_rsa_key; then
+    if test -f /force/ssh_host_rsa_key.pub; then
+        cat /force/ssh_host_rsa_key >"${RSA_KEY}"
+        cat /force/ssh_host_rsa_key.pub >"${RSA_KEY}.pub"
+        chgrp ssh_keys "${RSA_KEY}"
+        chmod 640 "${RSA_KEY}"
+        chmod 644 "${RSA_KEY}.pub"
+        echo "[conf] RSA ssh host key forced from /force"
+    fi
+fi
+
+if test -f /force/ssh_host_ecdsa_key; then
+    if test -f /force/ssh_host_ecdsa_key.pub; then
+        cat /force/ssh_host_ecdsa_key >"${ECDSA_KEY}"
+        cat /force/ssh_host_ecdsa_key.pub >"${ECDSA_KEY}.pub"
+        chgrp ssh_keys "${ECDSA_KEY}"
+        chmod 640 "${ECDSA_KEY}"
+        chmod 644 "${ECDSA_KEY}.pub"
+        echo "[conf] ECDSA ssh host key forced from /force"
+    fi
+fi
+
+if test -f /force/ssh_host_ed25519_key; then
+    if test -f /force/ssh_host_ed25519_key.pub; then
+        cat /force/ssh_host_ed25519_key >"${ED25519_KEY}"
+        cat /force/ssh_host_ed25519_key.pub >"${ED25519_KEY}.pub"
+        chgrp ssh_keys "${ED25519_KEY}"
+        chmod 640 "${ED25519_KEY}"
+        chmod 644 "${ED25519_KEY}.pub"
+        echo "[conf] ED25519 ssh host key forced from /force"
+    fi
+fi
+
+if test "${DCO_SSHD_FORCE_RSA_HOST_KEY}" != ""; then
+    if test "${DCO_SSHD_FORCE_RSA_HOST_PUB_KEY}" != ""; then
+        echo "${DCO_SSHD_FORCE_RSA_HOST_KEY}" >"${RSA_KEY}"
+        echo "${DCO_SSHD_FORCE_RSA_HOST_PUB_KEY}" >"${RSA_KEY}"
+        chgrp ssh_keys "${RSA_KEY}"
+        chmod 640 "${RSA_KEY}"
+        chmod 644 "${RSA_KEY}.pub"
+        echo "[conf] RSA ssh host key forced from env"
+    fi
+fi
+
+if test "${DCO_SSHD_FORCE_ECDSA_HOST_KEY}" != ""; then
+    if test "${DCO_SSHD_FORCE_ECDSA_HOST_PUB_KEY}" != ""; then
+        echo "${DCO_SSHD_FORCE_ECDSA_HOST_KEY}" >"${ECDSA_KEY}"
+        echo "${DCO_SSHD_FORCE_ECDSA_HOST_PUB_KEY}" >"${ECDSA_KEY}"
+        chgrp ssh_keys "${ECDSA_KEY}"
+        chmod 640 "${ECDSA_KEY}"
+        chmod 644 "${ECDSA_KEY}.pub"
+        echo "[conf] ECDSA ssh host key forced from env"
+    fi
+fi
+
+if test "${DCO_SSHD_FORCE_ED25519_HOST_KEY}" != ""; then
+    if test "${DCO_SSHD_FORCE_ED25519_HOST_PUB_KEY}" != ""; then
+        echo "${DCO_SSHD_FORCE_ED25519_HOST_KEY}" >"${ED25519_KEY}"
+        echo "${DCO_SSHD_FORCE_ED25519_HOST_PUB_KEY}" >"${ED25519_KEY}"
+        chgrp ssh_keys "${ED25519_KEY}"
+        chmod 640 "${ED25519_KEY}"
+        chmod 644 "${ED25519_KEY}.pub"
+        echo "[conf] ED25519 ssh host key forced from env"
+    fi
+fi

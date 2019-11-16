@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if test -f "/force/root_authorized_keys"; then
+    mkdir -p /root/.ssh
+    chmod 700 /root/.ssh
+    cat /force/root_authorized_keys >>/root/.ssh/authorized_keys
+    chmod 600 /root/.ssh/authorized_keys
+    echo "[conf] root authorized key added from /force"
+fi
+
+if test "${DCO_SSHD_ADD_ROOT_AUTHORIZED_KEY}" != ""; then
+    mkdir -p /root/.ssh
+    chmod 700 /root/.ssh
+    echo "${DCO_SSHD_ADD_ROOT_AUTHORIZED_KEY}" >>/root/.ssh/authorized_keys
+    chmod 600 /root/.ssh/authorized_keys
+    echo "[conf] root authorized key added from env"
+fi

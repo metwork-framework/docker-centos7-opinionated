@@ -1,0 +1,19 @@
+#!/bin/bash
+
+rm -Rf /etc/services.d/sshd
+if test "${DCO_SSHD_START}" = "1"; then
+    if ! test -f /etc/rc.d/init.d/functions; then
+        cat >/etc/rc.d/init.d/functions <<EOF
+# just a file to avoid to download plenty of dependencies
+
+function success() {
+    true
+}
+
+function failure() {
+    echo "ERROR: $*"
+}
+EOF
+    fi
+    cp -Rf /etc/services.d.template/sshd /etc/services.d/
+fi

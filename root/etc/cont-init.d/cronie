@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -Rf /etc/services.d/cronie
+if test "${DCO_CRONIE_START}" = "1"; then
+    cp -Rf /etc/services.d.template/cronie /etc/services.d/
+fi

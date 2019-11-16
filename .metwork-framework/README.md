@@ -1,5 +1,3 @@
-# docker-centos7-opinionated
-
 ## Features
 
 This repository holds an opinionated centos (version 7) docker image to be used as a 
@@ -8,7 +6,7 @@ base docker image. Some inspiration sources are given at the end of this file.
 Features:
 
 - Updated image (at build time)
-- Reasonable size (FIXME MB compressed on the hub), reasonable number of layers (FIXME) with a squashed Dockerfile
+- Reasonable size (< 100 MB on the docker hub), reasonable number of layers (8) with a squashed Dockerfile
 - Don't add too many packages by installing just what's needed
 - Don't break the upstream system
 - Init system and multiple processes launcher/supervisor ([S6](http://skarnet.org/software/s6/overview.html))

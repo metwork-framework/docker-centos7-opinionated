@@ -1,4 +1,4 @@
-NAME=metwork-framework/centos7-opinionated
+NAME=metwork/centos7-opinionated
 VERSION=$(shell ./version.sh)
 
 build:

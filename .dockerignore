@@ -3,3 +3,9 @@ README.md
 LICENSE
 Makefile
 version.sh
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+CHANGELOG.md
+.mergify.yml
+.drone.yml
+.metwork-framework/*

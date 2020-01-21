@@ -91,7 +91,7 @@ my_image/root/etc/services.d/myapp/run
 With `my_image/Dockerfile` like:
 
 ```
-FROM metwor-framework/centos7-opinionated
+FROM metwork/centos7-opinionated
 
 COPY root /
 ```

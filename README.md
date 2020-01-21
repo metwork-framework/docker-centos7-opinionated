@@ -32,7 +32,7 @@ Features:
 
 Not really usefull (because it's mainly a base image to use in the `FROM` keyword) but you can play with it with (for example):
 
-    docker run -i -t metwork-framework/centos7-opinionated:latest bash
+    docker run -i -t metwork/centos7-opinionated:latest bash
 
 Available environnement variables:
 
@@ -106,7 +106,7 @@ my_image/root/etc/services.d/myapp/run
 With `my_image/Dockerfile` like:
 
 ```
-FROM metwor-framework/centos7-opinionated
+FROM metwork/centos7-opinionated
 
 COPY root /
 ```

@@ -58,7 +58,7 @@ If you prefer, you can also use a volume mounted in `/force` in the container wi
 When you start this image with the default "entrypoint" (`/init`), it launch the S6 process supervisor (see links at the end) 
 provided by the [s6-overlay](https://github.com/just-containers/s6-overlay).
 
-First, it executes `/etc/cont-init.d/*` initialization (short) tasks. Then, it launchs `/etc/services/*/run` script. This script
+First, it executes `/etc/cont-init.d/*` initialization (short) tasks. Then, it launchs `/etc/services.d/*/run` script. This script
 must execute your daemon in a long-lived way and will have to deal with signals. If this "run script" exits, it will be automatically 
 restarted. An easy way to write a such script is to use the "exec" bash builtin with the "foreground mode" startup command of your service.
 

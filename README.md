@@ -1,9 +1,8 @@
 # docker-centos7-opinionated
 
-[//]: # (automatically generated from https://github.com/metwork-framework/resources/blob/master/cookiecutter/_%7B%7Bcookiecutter.repo%7D%7D/README.md)
+[//]: # (automatically generated from https://github.com/metwork-framework/github_organization_management/blob/master/common_files/README.md)
 
 **Status (master branch)**
-
 
 
 
@@ -11,8 +10,6 @@
 [![DockerHub](https://github.com/metwork-framework/resources/blob/master/badges/dockerhub_link.svg)](https://hub.docker.com/r/metwork/docker-centos7-opinionated/)
 [![Maintenance](https://github.com/metwork-framework/resources/blob/master/badges/maintained.svg)]()
 
-
-[//]: # (TABLE_OF_CONTENTS_PLACEHOLDER)
 
 
 
@@ -133,11 +130,6 @@ Please consult [s6-overlay](https://github.com/just-containers/s6-overlay) REAME
 - [s6-overlay](https://github.com/just-containers/s6-overlay)
 - [s6](http://skarnet.org/software/s6/overview.html)
 - [cronie](https://fedorahosted.org/cronie/)
-
-
-
-
-
 
 
 

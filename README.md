@@ -6,7 +6,7 @@
 
 
 
-[![Drone CI](http://metwork-framework.org:8000/api/badges/metwork-framework/docker-centos7-opinionated/status.svg)](http://metwork-framework.org:8000/metwork-framework/docker-centos7-opinionated)
+[![GitHub CI](https://github.com/metwork-framework/docker-centos7-opinionated/workflows/CI/badge.svg?branch=master)](https://github.com/metwork-framework/docker-centos7-opinionated/actions?query=workflow%3ACI+branch%3Amaster)
 [![DockerHub](https://github.com/metwork-framework/resources/blob/master/badges/dockerhub_link.svg)](https://hub.docker.com/r/metwork/docker-centos7-opinionated/)
 [![Maintenance](https://raw.githubusercontent.com/metwork-framework/resources/master/badges/maintained.svg)](https://github.com/metwork-framework/resources/blob/master/badges/maintained.svg)
 

@@ -4,9 +4,7 @@
 
 **Status (master branch)**
 
-
-
-[![GitHub CI](https://github.com/metwork-framework/docker-centos7-opinionated/workflows/CI/badge.svg?branch=master)](https://github.com/metwork-framework/docker-centos7-opinionated/actions?query=workflow%3ACI+branch%3Amaster)
+[![GitHub CI](https://github.com/metwork-framework/docker-centos7-opinionated/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/metwork-framework/docker-centos7-opinionated/actions?query=workflow%3ACI+branch%3Amaster)
 [![DockerHub](https://github.com/metwork-framework/resources/blob/master/badges/dockerhub_link.svg)](https://hub.docker.com/r/metwork/centos7-opinionated/)
 [![Maintenance](https://raw.githubusercontent.com/metwork-framework/resources/master/badges/maintained.svg)](https://github.com/metwork-framework/resources/blob/master/badges/maintained.svg)
 
